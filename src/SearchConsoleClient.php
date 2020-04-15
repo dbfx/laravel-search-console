@@ -68,7 +68,8 @@ class SearchConsoleClient
                  * https://productforums.google.com/forum/?hl=en#!topic/webmasters/wF_Rm9CGr4U
                  */
 
-                if (count($row->getKeys())) {
+                $keys = $row->getKeys();
+                if (is_array($keys) || is_object($keys)) {
                     $item = array_combine($request->getDimensions(), $row->getKeys());
                     $uniqueHash = $this->getUniqueItemHash($row, $request);
                 } else {
