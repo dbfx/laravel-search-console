@@ -7,6 +7,7 @@ use Google_Service_Webmasters;
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class SearchConsoleClient
 {
